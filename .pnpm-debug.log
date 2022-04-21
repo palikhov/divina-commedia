@@ -1,0 +1,20 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "errno": 1,
+    "code": "ELIFECYCLE",
+    "pkgid": "astate-companion@1.0",
+    "stage": "dev",
+    "script": "svelte-kit dev",
+    "pkgname": "astate-companion",
+    "err": {
+      "name": "pnpm",
+      "message": "astate-companion@1.0 dev: `svelte-kit dev`\nExit status 1",
+      "code": "ELIFECYCLE",
+      "stack": "pnpm: astate-companion@1.0 dev: `svelte-kit dev`\nExit status 1\n    at EventEmitter.<anonymous> (C:\\Users\\Paige\\.node\\corepack\\pnpm\\7.0.0-rc.7\\dist\\pnpm.cjs:106739:20)\n    at EventEmitter.emit (node:events:527:28)\n    at ChildProcess.<anonymous> (C:\\Users\\Paige\\.node\\corepack\\pnpm\\7.0.0-rc.7\\dist\\pnpm.cjs:93308:18)\n    at ChildProcess.emit (node:events:527:28)\n    at maybeClose (node:internal/child_process:1090:16)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)"
+    }
+  },
+  "2 warn pnpm:global": " Local package.json exists, but node_modules missing, did you mean to install?"
+}
