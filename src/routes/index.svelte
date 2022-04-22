@@ -44,13 +44,23 @@
 	<title>{$t('common.title')} – {$t('common.author')}</title>
 </svelte:head>
 
-<h1 class="font-extrabold text-3xl mb-10">
+<h1 class="mb-10 text-3xl font-extrabold">
 	{$t('common.inferno')}
 </h1>
 
+<ul class="list-decimal">
+	{#each cantos as canto}
+		<li>
+			<a class="text-blue-500 underline hover:text-blue-700" href="#canto-{canto.number}"
+				>{$t('common.canto')} {convertToRoman(canto.number)}</a
+			>
+		</li>
+	{/each}
+</ul>
+
 {#each cantos as canto}
 	<a href="#canto-{canto.number}" id="canto-{canto.number}"
-		><h2 class="font-bold text-2xl my-6">
+		><h2 class="mb-6 pt-20 text-2xl font-bold">
 			{$t('common.canto')}
 			{convertToRoman(canto.number)}
 		</h2>
@@ -59,7 +69,7 @@
 		{#each { length: canto.lenght } as _, _i}
 			{@const i = _i + 1}
 			<p class={i % 3 === 0 ? 'mb-6' : ''}>
-				<span class="text-gray-300 absolute -ml-10 unselectable">{i}</span>
+				<span class="unselectable absolute -ml-10 text-gray-300">{i}</span>
 				{$t('inferno.canto' + canto.number + '.' + i)}
 			</p>
 		{/each}

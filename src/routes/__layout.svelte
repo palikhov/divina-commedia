@@ -14,13 +14,14 @@
 	const count = writable(3);
 </script>
 
-<div class="mx-auto max-w-6xl p-16 font-serif">
-	<div class="mb-10">
-		<select bind:value={$locale} class="border rounded py-2 px-6">
-			{#each $locales as value}
-				<option {value}>{$t(`lang.${value}`)}</option>
-			{/each}
-		</select>
-	</div>
+<div class="sticky top-0 z-50 mb-10 bg-gray-100">
+	<select bind:value={$locale} class="w-full rounded border py-2 px-6">
+		{#each $locales as value}
+			<option {value}>{$t(`lang.${value}`)}</option>
+		{/each}
+	</select>
+</div>
+
+<div class="mx-auto max-w-6xl pl-12 pr-0 font-serif">
 	<slot />
 </div>
