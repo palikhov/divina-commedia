@@ -1,10 +1,12 @@
 # Divina Commedia
 
-Website: https://divina-commedia.netlify.app/
-
 Multilingual "Divina Commedia" compilation for quick cross-referense of translations.
 
 Supported languages: EN, IT, RU.
+
+Website: https://divina-commedia.netlify.app/ 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/70781ca0-408f-4d05-978f-53e105d30aa2/deploy-status)](https://app.netlify.com/sites/divina-commedia/deploys)
 
 ## Copyright
 
