@@ -1,8 +1,10 @@
 {
-	"title": "Divina Comedia",
+	"lang": "en",
+	"title": "Divine Comedy",
 	"author": "Dante Alighieri",
 	"canto": "Canto",
 	"inferno": "Inferno",
 	"purgatorio": "Purgatory",
-	"paradiso": "Paradise"
+	"paradiso": "Paradise",
+	"copyright": "The Divine Comedy translation by Henry Wadsworth Longfellow (1867, Public Domain)"
 }

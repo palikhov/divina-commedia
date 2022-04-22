@@ -1,77 +1,30 @@
 <script>
 	import { t } from '$lib/translations';
-
-	const cantos = [
-		{
-			number: 1,
-			lenght: 136
-		},
-		{
-			number: 2,
-			lenght: 142
-		}
-	];
-
-	function convertToRoman(num) {
-		var roman = {
-			M: 1000,
-			CM: 900,
-			D: 500,
-			CD: 400,
-			C: 100,
-			XC: 90,
-			L: 50,
-			XL: 40,
-			X: 10,
-			IX: 9,
-			V: 5,
-			IV: 4,
-			I: 1
-		};
-		var str = '';
-
-		for (var i of Object.keys(roman)) {
-			var q = Math.floor(num / roman[i]);
-			num -= q * roman[i];
-			str += i.repeat(q);
-		}
-
-		return str;
-	}
 </script>
 
 <svelte:head>
-	<title>{$t('common.title')} – {$t('common.author')}</title>
+	<title>{$t('common.author')} – {$t('common.title')}</title>
+	<meta name="description" content="EN, IT & RU translation of Divine Comedy by Dante Alighieri" />
 </svelte:head>
 
-<h1 class="mb-10 text-3xl font-extrabold">
-	{$t('common.inferno')}
+<h1 class="mb-6 ">
+	<span class="text-2xl font-bold">{$t('common.author')}</span>
+	<br />
+	<span class="text-4xl font-extrabold">{$t('common.title')}</span>
 </h1>
 
-<ul class="list-decimal">
-	{#each cantos as canto}
-		<li>
-			<a class="text-blue-500 underline hover:text-blue-700" href="#canto-{canto.number}"
-				>{$t('common.canto')} {convertToRoman(canto.number)}</a
-			>
-		</li>
-	{/each}
+<ul class="text-xl">
+	<li>
+		<a href="/inferno?lang={$t('common.lang')}" class="hover:text-orange-700 text-orange-500 hover:underline">{$t('common.inferno')}</a>
+	</li>
+	<li>
+		<a href="/purgatorio?lang={$t('common.lang')}" class="hover:text-orange-700 text-orange-500 hover:underline line-through"
+			>{$t('common.purgatorio')}</a
+		>
+	</li>
+	<li>
+		<a href="/paradiso?lang={$t('common.lang')}" class="hover:text-orange-700 text-orange-500 hover:underline line-through"
+			>{$t('common.paradiso')}</a
+		>
+	</li>
 </ul>
-
-{#each cantos as canto}
-	<a href="#canto-{canto.number}" id="canto-{canto.number}"
-		><h2 class="mb-6 pt-20 text-2xl font-bold">
-			{$t('common.canto')}
-			{convertToRoman(canto.number)}
-		</h2>
-	</a>
-	<div class="text-base md:text-lg">
-		{#each { length: canto.lenght } as _, _i}
-			{@const i = _i + 1}
-			<p class={i % 3 === 0 ? 'mb-6' : ''}>
-				<span class="unselectable absolute -ml-10 text-gray-300">{i}</span>
-				{$t('inferno.canto' + canto.number + '.' + i)}
-			</p>
-		{/each}
-	</div>
-{/each}

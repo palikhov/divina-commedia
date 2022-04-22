@@ -1,8 +1,10 @@
 {
-	"title": "Divina Comedia",
+	"lang": "it",
+	"title": "Divina Commedia",
 	"author": "Dante Alighieri",
 	"canto": "Canto",
 	"inferno": "Inferno",
 	"purgatorio": "Purgatorio",
-	"paradiso": "Paradiso"
+	"paradiso": "Paradiso",
+	"copyright": "La Divina Commedia di Dante Alighieri (1320, pubblico dominio)"
 }
