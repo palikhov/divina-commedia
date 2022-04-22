@@ -80,7 +80,7 @@
 <ul>
 	{#each cantos as canto}
 		<li>
-			<a class="text-orange-500 hover:underline hover:text-orange-700" href="#canto-{canto.number}"
+			<a class="text-orange-500 hover:text-orange-700 hover:underline" href="#canto-{canto.number}"
 				>{$t('common.canto')} {convertToRoman(canto.number)}</a
 			>
 		</li>

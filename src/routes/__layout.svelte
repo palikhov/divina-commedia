@@ -2,9 +2,8 @@
 	import { t, locales, locale, loadTranslations } from '$lib/translations';
 	/** @type {import('@sveltejs/kit').Load} */
 	export const load = async (params) => {
-		console.log(params);
 		let lang = params.url.searchParams.get('lang') || 'it';
-		await loadTranslations(lang); // keep this just before the `return`
+		await loadTranslations(lang);
 		return {};
 	};
 </script>
@@ -13,11 +12,11 @@
 	import '../app.css';
 </script>
 
-<div class="mx-auto sticky top-0 z-50 p-2 max-w-2xl bg-amber-50 flex flex-row items-center">
+<div class="sticky top-0 z-50 mx-auto flex max-w-2xl flex-row items-center bg-amber-50 p-2">
 	<a
 		href="/?lang={$locale}"
 		type="button"
-		class="mr-4 px-4 py-2 text-xl font-medium rounded shadow-sm text-white bg-amber-900 hover:bg-amber-700"
+		class="mr-4 rounded bg-amber-900 px-4 py-2 text-xl font-medium text-white shadow-sm hover:bg-amber-700"
 	>
 		<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 			<path
@@ -33,7 +32,7 @@
 	</select>
 </div>
 
-<div class="mx-auto max-w-2xl pl-12 pr-0 font-serif mt-12">
+<div class="mx-auto mt-12 max-w-2xl pl-12 pr-0 font-serif">
 	<slot />
 	<div class="my-20 text-stone-500">{$t('common.copyright')}</div>
 </div>

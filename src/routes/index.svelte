@@ -15,15 +15,15 @@
 
 <ul class="text-xl">
 	<li>
-		<a href="/inferno?lang={$t('common.lang')}" class="hover:text-orange-700 text-orange-500 hover:underline">{$t('common.inferno')}</a>
+		<a href="/inferno?lang={$t('common.lang')}" class="text-orange-500 hover:text-orange-700 hover:underline">{$t('common.inferno')}</a>
 	</li>
 	<li>
-		<a href="/purgatorio?lang={$t('common.lang')}" class="hover:text-orange-700 text-orange-500 hover:underline line-through"
+		<a href="/purgatorio?lang={$t('common.lang')}" class="text-orange-500 line-through hover:text-orange-700 hover:underline"
 			>{$t('common.purgatorio')}</a
 		>
 	</li>
 	<li>
-		<a href="/paradiso?lang={$t('common.lang')}" class="hover:text-orange-700 text-orange-500 hover:underline line-through"
+		<a href="/paradiso?lang={$t('common.lang')}" class="text-orange-500 line-through hover:text-orange-700 hover:underline"
 			>{$t('common.paradiso')}</a
 		>
 	</li>
